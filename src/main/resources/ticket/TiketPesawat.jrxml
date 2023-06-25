@@ -378,18 +378,16 @@ bandara setempat]]></text>
 				</graphicElement>
 			</line>
 			<image>
-				<reportElement x="580" y="30" width="35" height="35" uuid="39f32532-f146-433f-a1d0-bc320666e26a">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<imageExpression><![CDATA["C:/Users/User/Downloads/danger.jpg"]]></imageExpression>
+				<reportElement x="577" y="29" width="40" height="41" uuid="55be6dd9-fb06-4367-9390-e79161e235c5"/>
+				<imageExpression><![CDATA["D:/Final_Project-master/src/main/resources/gambar/danger.jpg"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement x="299" y="30" width="60" height="59" uuid="a2c7e807-80ae-465a-84b7-1f21be12c47c"/>
-				<imageExpression><![CDATA["C:/Users/User/Downloads/jam.jpg"]]></imageExpression>
+				<reportElement x="300" y="30" width="64" height="54" uuid="c536e1fd-2837-4688-ab36-2c383950f104"/>
+				<imageExpression><![CDATA["D:/Final_Project-master/src/main/resources/gambar/jam.jpg"]]></imageExpression>
 			</image>
 			<image>
-				<reportElement mode="Transparent" x="15" y="28" width="69" height="52" uuid="cdade127-d769-476e-8a70-94351ca68e25"/>
-				<imageExpression><![CDATA["C:/Users/User/Downloads/pesawat.png"]]></imageExpression>
+				<reportElement x="10" y="29" width="79" height="49" uuid="339e642d-2e71-4500-af5c-cb6a2036c30d"/>
+				<imageExpression><![CDATA["D:/Final_Project-master/src/main/resources/gambar/pesawat.png"]]></imageExpression>
 			</image>
 		</band>
 		<band height="120">

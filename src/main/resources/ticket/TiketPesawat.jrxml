@@ -134,7 +134,7 @@ FROM booking
 				<staticText>
 					<reportElement x="40" y="0" width="370" height="61" forecolor="#FFFFFF" uuid="9cc9ee2c-20a5-441c-b1ae-7a5d7fb8bef2"/>
 					<textElement textAlignment="Center">
-						<font fontName="Times New Roman" size="43" isBold="false" isItalic="true"/>
+						<font fontName="SansSerif" size="43" isBold="false" isItalic="true"/>
 					</textElement>
 					<text><![CDATA[kamihikoukiairlines]]></text>
 				</staticText>

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/api/invoice")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app"})
 @Tag(name = "Invoice/Ticket", description = "Invoice/Ticket Controller | contains : Generate Ticket/Cetak Tiket")
 public class InvoiceController {
 

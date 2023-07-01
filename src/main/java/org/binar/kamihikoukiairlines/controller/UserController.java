@@ -17,7 +17,7 @@ import java.util.Optional;
 //@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/user")
-@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app"})
+@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app", "https://kamihikouki.vercel.app/"})
 @Tag(name = "Users", description = "User Controller | contains : Get by Id, Update profile user, Reset Password, Delete user")
 public class UserController {
     @Autowired

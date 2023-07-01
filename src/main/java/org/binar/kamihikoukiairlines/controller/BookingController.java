@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/booking")
-@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app"})
+@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app", "https://kamihikouki.vercel.app/"})
 @Tag(name = "Booking", description = "Booking Controller | contains : Payment, Add Booking, Get All Booking, Get Booking By Id, Get History Booking By User Id, Get Booking By User Id and Success, Get Booking By Booking Code")
 public class BookingController {
     @Autowired

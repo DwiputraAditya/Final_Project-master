@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/passenger")
-@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app"})
+@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app", "https://kamihikouki.vercel.app/"})
 @Tag(name = "Passenger", description = "Passenger Controller | contains : Add Passengers/Add All Passenger")
 public class PassengerController {
 

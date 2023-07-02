@@ -40,6 +40,7 @@ public class ScheduleController {
     }
 
     @GetMapping("/getScheduleById/{scheduleId}")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<Schedule> getScheduleById(@PathVariable(value = "scheduleId") Long id) {
         Optional<Schedule> schedule = scheduleService.getScheduleById(id);
         if (schedule.isPresent()) {

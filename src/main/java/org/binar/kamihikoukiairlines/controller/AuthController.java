@@ -45,7 +45,6 @@ public class AuthController {
     private AuthService authService;
 
     @PostMapping("/signin")
-    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<?> signIn(@Valid @RequestBody LoginRequest loginRequest) {
         AuthenticationResponse authenticationResponse = authService.loginUser(loginRequest);
 

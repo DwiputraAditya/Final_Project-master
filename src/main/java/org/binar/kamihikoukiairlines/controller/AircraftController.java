@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/aircraft")
-@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app", "https://kamihikouki.vercel.app/"})
+//@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app", "https://kamihikouki.vercel.app/"})
 @Tag(name = "Aircraft", description = "Aircraft Controller | contains : Add Aircraft, Get All Aircraft, Update Aircraft, Delete Aircraft")
 public class AircraftController {
     @Autowired

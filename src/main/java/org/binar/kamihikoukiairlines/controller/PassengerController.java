@@ -28,7 +28,6 @@ public class PassengerController {
     }
 
     @PostMapping("/addPassengers")
-    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<List<Passenger>> addPassengers(@RequestBody List<PassengerRequest> passengerRequests) {
         try {
             List<Passenger> passengers = passengerService.addPassengers(passengerRequests);

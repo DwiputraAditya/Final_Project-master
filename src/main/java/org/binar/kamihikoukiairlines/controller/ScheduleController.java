@@ -40,7 +40,6 @@ public class ScheduleController {
     }
 
     @GetMapping("/getScheduleById/{scheduleId}")
-    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<Schedule> getScheduleById(@PathVariable(value = "scheduleId") Long id) {
         Optional<Schedule> schedule = scheduleService.getScheduleById(id);
         if (schedule.isPresent()) {
@@ -51,7 +50,6 @@ public class ScheduleController {
     }
 
     @GetMapping("/search")
-    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<Page<Schedule>> searchFlightWithoutArrival(@RequestParam("departure") String departure,
                                                                      @RequestParam("arrival") String arrival,
                                                                      @RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date,

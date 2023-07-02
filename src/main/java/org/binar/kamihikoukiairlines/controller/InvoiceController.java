@@ -28,7 +28,6 @@ public class InvoiceController {
     private HttpServletResponse response;
 
     @GetMapping("/generateTicket")
-    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public void getInvoiceReport(Long bookingId) throws Exception{
         response.setContentType("application/pdf");
         response.setHeader("Content-disposition", "attachment; filename=\"tiket.pdf\"");

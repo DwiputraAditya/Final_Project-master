@@ -13,7 +13,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/airport")
-//@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app", "https://kamihikouki.vercel.app/"})
 @Tag(name = "Airport", description = "Airport Controller | contains : Add Airport, Get All Airport, Update Airport, Delete Airport")
 public class AirportController {
     @Autowired

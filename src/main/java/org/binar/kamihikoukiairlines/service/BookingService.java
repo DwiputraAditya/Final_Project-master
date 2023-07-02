@@ -39,38 +39,14 @@ public class BookingService {
         return bookingRepository.findAll();
     }
 
-//    public Booking bookTicket(Long userId, Long scheduleId) throws Exception {
-//        Users users = userRepository.findById(userId)
-//                .orElseThrow(() -> new Exception("User Id Not Found"));
-//        Schedule schedule = scheduleRepository.findById(scheduleId)
-//                .orElseThrow(() -> new Exception("Schedule Id Not Found"));
-//
-//        LocalDateTime dueDate = LocalDateTime.now().plusHours(2);
-//        Booking booking = new Booking();
-//        booking.setUsers(users);
-//        booking.setSchedule(schedule);
-//        booking.setBookingCode(generateBookingCode());
-//        booking.setDueValid(dueDate);
-//        booking.setIsSuccess(false);
-//        booking.setIsValid(true);
-//        log.info("Has successfully booking ticket!");
-//        return bookingRepository.save(booking);
-//    }
-
     @Transactional
     public Booking createBooking(BookingRequest bookingRequest) throws Exception {
-        // Mendapatkan data pengguna berdasarkan ID
         Users user = userRepository.findById(bookingRequest.getUsersId())
                 .orElseThrow(() -> new Exception("User not found"));
-
-        // Mendapatkan data jadwal penerbangan berdasarkan ID
         Schedule schedule = scheduleRepository.findById(bookingRequest.getScheduleId())
                 .orElseThrow(() -> new Exception("Schedule not found"));
 
-        // Mendapatkan data penumpang berdasarkan ID yang diberikan
         List<Passenger> passengers = passengerRepository.findAllById(bookingRequest.getPassengerId());
-
-        // Membuat objek Booking
         LocalDateTime dueDate = LocalDateTime.now().plusHours(2);
         Booking booking = new Booking();
         booking.setUsers(user);

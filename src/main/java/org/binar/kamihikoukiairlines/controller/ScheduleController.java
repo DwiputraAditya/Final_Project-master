@@ -9,7 +9,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -18,7 +17,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/schedule")
-//@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app", "https://kamihikouki.vercel.app/"})
 @Tag(name = "Schedule", description = "Schedule Controller | contains : Add Schedule, Get All Schedule, Get Schedule By Id, Search Schedule")
 public class ScheduleController {
     @Autowired

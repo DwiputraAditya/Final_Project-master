@@ -8,7 +8,6 @@ import org.binar.kamihikoukiairlines.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.webjars.NotFoundException;
 
@@ -16,7 +15,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/booking")
-//@CrossOrigin(origins = {"http://localhost:3000", "https://kamihikouki.vercel.app", "https://kamihikouki.vercel.app/"})
 @Tag(name = "Booking", description = "Booking Controller | contains : Payment, Add Booking, Get All Booking, Get Booking By Id, Get History Booking By User Id, Get Booking By User Id and Success, Get Booking By Booking Code")
 public class BookingController {
     @Autowired

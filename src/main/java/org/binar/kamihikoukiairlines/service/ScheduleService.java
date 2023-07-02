@@ -2,7 +2,6 @@ package org.binar.kamihikoukiairlines.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.binar.kamihikoukiairlines.dto.ScheduleRequest;
-import org.binar.kamihikoukiairlines.model.Airport;
 import org.binar.kamihikoukiairlines.model.Route;
 import org.binar.kamihikoukiairlines.model.Schedule;
 import org.binar.kamihikoukiairlines.repository.AirportRepository;

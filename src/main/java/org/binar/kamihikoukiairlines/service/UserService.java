@@ -5,13 +5,11 @@ import org.binar.kamihikoukiairlines.Exception.UserNotFoundException;
 import org.binar.kamihikoukiairlines.dto.EditProfileRequest;
 import org.binar.kamihikoukiairlines.model.Users;
 import org.binar.kamihikoukiairlines.repository.UserRepository;
-import org.binar.kamihikoukiairlines.response.MessageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import javax.validation.Valid;
 import java.util.Optional;
 
 @Service

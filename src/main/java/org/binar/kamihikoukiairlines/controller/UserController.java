@@ -25,6 +25,7 @@ public class UserController {
 
     @GetMapping("/getUserById/{userId}")
 //    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<Users> getUserById(@PathVariable(value = "userId") Long id) {
         Optional<Users> userData = userService.getUserById(id);
         if (userData.isPresent()) {
@@ -35,7 +36,7 @@ public class UserController {
     }
 
     @PutMapping("/updateUser/{userId}")
-//    @PreAuthorize("hasRole('BUYER')")
+    @PreAuthorize("hasRole('BUYER')")
     public ResponseEntity<String> updateUser(@PathVariable(value = "userId") Long id, @RequestBody EditProfileRequest user){
         userService.updateUser(id,user);
         return new ResponseEntity<>("Data berhasil di update", HttpStatus.OK);

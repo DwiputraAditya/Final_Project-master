@@ -8,6 +8,7 @@ import org.binar.kamihikoukiairlines.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.webjars.NotFoundException;
 
@@ -27,6 +28,7 @@ public class BookingController {
     }
 
     @PostMapping("/addBooking")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<Booking> bookTicket(@RequestBody BookingRequest bookingRequest) {
         try {
             Booking newBooking = bookingService.createBooking(bookingRequest);
@@ -38,6 +40,7 @@ public class BookingController {
     }
 
     @PostMapping("/payment")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<?> payment(@RequestBody PaymentDTO paymentDTO) {
         try {
             Booking booking = bookingService.payment(paymentDTO);
@@ -50,6 +53,7 @@ public class BookingController {
     }
 
     @GetMapping("/bookingById/{bookingId}")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<Booking> getBookingHistoryById(@PathVariable Long bookingId) {
         try {
             Booking booking = bookingService.getBookingById(bookingId);
@@ -60,16 +64,19 @@ public class BookingController {
     }
 
     @GetMapping("/successfulBookingsHistory/{userId}")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public List<Booking> getAllSuccessfulBookingsByUserId(@PathVariable Long userId) {
         return bookingService.findAllByUsersIdAndIsSuccess(userId, true);
     }
 
     @GetMapping("/historyById/{userId}")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public List<Booking> getAllBookingsByUserId(@PathVariable Long userId) {
         return bookingService.findAllByUsersId(userId);
     }
 
     @GetMapping("/getHistoryByBookingCode/{bookingCode}")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<Booking> findBookingByBookingCode(@PathVariable String bookingCode) {
         Booking booking = bookingService.findBookingByBookingCode(bookingCode);
         if (booking != null) {

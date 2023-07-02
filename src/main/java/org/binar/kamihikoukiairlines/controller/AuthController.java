@@ -13,6 +13,7 @@ import org.binar.kamihikoukiairlines.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -44,6 +45,7 @@ public class AuthController {
     private AuthService authService;
 
     @PostMapping("/signin")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<?> signIn(@Valid @RequestBody LoginRequest loginRequest) {
         AuthenticationResponse authenticationResponse = authService.loginUser(loginRequest);
 
@@ -58,6 +60,7 @@ public class AuthController {
     }
 
     @PostMapping("/signup")
+    @PreAuthorize("hasAnyRole('BUYER', 'ADMIN')")
     public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
         authService.registerUser(signUpRequest);
         return ResponseEntity.ok(new MessageResponse("User Registered Successful"));

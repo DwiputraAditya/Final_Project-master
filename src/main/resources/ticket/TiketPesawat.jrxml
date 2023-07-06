@@ -402,7 +402,7 @@ bandara setempat]]></text>
 Nama Penumpang]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="610" y="66" width="50" height="30" uuid="98f30811-8939-4dad-b8a3-4e15b6a2138b">
+				<reportElement x="551" y="66" width="50" height="30" uuid="98f30811-8939-4dad-b8a3-4e15b6a2138b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9bd722b0-2348-4dfb-8f16-12fa88f47f0e"/>
 				</reportElement>
 				<textElement textAlignment="Left">
@@ -411,7 +411,7 @@ Nama Penumpang]]></text>
 				<textFieldExpression><![CDATA[$F{city_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="561" y="66" width="49" height="30" uuid="1bcbc0f8-2393-4b4c-84af-ab7abf3757f8">
+				<reportElement x="610" y="66" width="49" height="30" uuid="1bcbc0f8-2393-4b4c-84af-ab7abf3757f8">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4757bc7b-37f0-4cbb-85b4-cd790b03d333"/>
 				</reportElement>
 				<textElement>
